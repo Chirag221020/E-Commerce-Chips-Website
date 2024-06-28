@@ -359,7 +359,7 @@ img {
   left: -0.5rem;
 }
 /* Swiper class */
-.swiper {
+.swiper{
   margin-inline: initial;
   overflow: visible;
 }
@@ -662,7 +662,8 @@ img {
     justify-content: center;
   }
   .footer-content {
-    grid-template-columns: 1fr;
+    display: flex;
+    /* grid-template-columns: 1fr; */
     justify-items: center;
     row-gap: 1.5rem;
   }
@@ -702,7 +703,8 @@ img {
     grid-template-columns: 550px;
   }
   .footer-content {
-    grid-template-columns: repeat(3, max-conent);
+    /* grid-template-columns: repeat(3, max-conent); */
+    display: flex;
     justify-content: space-between;
     align-items: center;
   }
