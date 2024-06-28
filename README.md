@@ -13,5 +13,5 @@ This project is a fully responsive e-commerce website designed for purchasing ch
 - HTML for structuring the content
 - CSS for styling and layout, including responsive design techniques
 - JavaScript for dynamic behavior and interactivity
-- 
+  
 This project showcases my skills in front-end web development and my ability to create functional, aesthetically pleasing, and responsive web applications.
