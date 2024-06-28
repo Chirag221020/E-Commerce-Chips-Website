@@ -526,12 +526,12 @@ img {
   font: 400 1.5rem "Titan One", sans-serif;
   margin-bottom: 0.5rem;
 }
-.contact-social{
+.contact-social {
   display: flex;
   justify-content: center;
   column-gap: 0.75rem;
 }
-.contact-social a{
+.contact-social a {
   color: hsl(45, 100%, 52%);
   font-size: 1.5rem;
 }
@@ -545,70 +545,69 @@ img {
 }
 .contact-shrimp,
 .contact-crab,
-.contact-meat{
+.contact-meat {
   position: absolute;
   width: 40px;
-  opacity: .5;
+  opacity: 0.5;
 }
-.contact-shrimp{
-top: 9rem;
-right: 1.5rem;
-rotate:  15deg;
+.contact-shrimp {
+  top: 9rem;
+  right: 1.5rem;
+  rotate: 15deg;
 }
-.contact-crab{
+.contact-crab {
   top: 17rem;
   left: 1rem;
   rotate: 15deg;
 }
-.contact-meat{
+.contact-meat {
   right: 2rem;
   bottom: 11rem;
   rotate: -15deg;
 }
 
 /*=============== FOOTER ===============*/
-.footer{
+.footer {
   padding-block: 3rem 2rem;
 }
-.footer-container{
+.footer-container {
   row-gap: 2rem;
 }
-.footer-logo{
+.footer-logo {
   color: white;
-  font: 2.5rem  "Titan One", sans-serif;
+  font: 2.5rem "Titan One", sans-serif;
   justify-self: center;
-  text-shadow: 0 2px 4px  hsl(170, 100%, 23%);;
+  text-shadow: 0 2px 4px hsl(170, 100%, 23%);
 }
-.footer-content{
+.footer-content {
   grid-template-columns: repeat(2, max-conent);
   justify-content: center;
   row-gap: 3.5rem;
 }
-.footer-copy{
+.footer-copy {
   grid-column: 1/3;
   text-align: center;
 }
-.footer-link{
+.footer-link {
   color: white;
-  transition: color .4s;
+  transition: color 0.4s;
 }
-.footer-link:hover{
+.footer-link:hover {
   color: hsl(45, 100%, 52%);
-  
 }
 /*=============== SCROLL BAR ===============*/
-::-webkit-scrollbar{
-  width: .6rem;
+::-webkit-scrollbar {
+  width: 0.6rem;
   background-color: hsl(170, 50%, 30%);
 }
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background-color: hsl(170, 50%, 20%);
 }
-::-webkit-scrollbar-thumb:hover{
+::-webkit-scrollbar-thumb:hover {
   background-color: hsl(170, 50%, 15%);
 }
 /*=============== SCROLL UP ===============*/
-.scrollup{
+.scrollup {
   position: fixed;
   right: 1rem;
   bottom: -50%;
@@ -618,20 +617,322 @@ rotate:  15deg;
   display: inline-flex;
   padding: 6px;
   font-size: 1.25rem;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   z-index: 10;
-  transition: bottom .4s;
+  transition: bottom 0.8s;
+  transition: 0.2s;
 }
-.scrollup:hover{
-  transform: rotateY(-0.5rem);
+.scrollup:hover {
+  transform: translateY(-0.5rem);
+ 
 }
 /* Show Scroll Up */
-.show-scroll{
+.show-scroll {
   bottom: 3rem;
 }
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
-
+@media screen and (max-width: 340px) {
+  .container {
+    margin-inline: 1rem;
+  }
+  .section-title {
+    font-size: 1.5rem;
+  }
+  .home-title {
+    font-size: 3rem;
+  }
+  .home-buttons {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  .home-circle {
+    height: 250px;
+    width: 250px;
+  }
+  .home-subcircle {
+    height: 200px;
+    width: 200px;
+  }
+  .home-images .home-img {
+    width: 200px;
+  }
+  .product-content {
+    grid-template-columns: 160px;
+    justify-content: center;
+  }
+  .footer-content {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 1.5rem;
+  }
+  .footer-copy {
+    grid-column: 1;
+  }
+}
 /* For medium devices */
-
+@media screen and (min-width: 540px) {
+  .home-container,
+  .fav-container,
+  .care-container {
+    grid-template-columns: 370px;
+    justify-content: center;
+  }
+  .fav-swiper {
+    max-width: 600px;
+    overflow-x: clip;
+    justify-self: center;
+  }
+  .product-content {
+    grid-template-columns: repeat(2, 160px);
+    justify-content: center;
+  }
+  .contact {
+    display: grid;
+    grid-template-columns: 450px;
+    justify-content: center;
+  }
+}
+/* For tablets devices */
+@media screen and (min-width: 768px) {
+  .product-content {
+    grid-template-columns: repeat(3, 160px);
+  }
+  .contact {
+    grid-template-columns: 550px;
+  }
+  .footer-content {
+    grid-template-columns: repeat(3, max-conent);
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-copy {
+    grid-column: initial;
+  }
+  .footer-link:nth-child(2) {
+    order: 1;
+  }
+}
 /* For large devices */
+@media screen and (min-width: 1150px) {
+  .container {
+    margin-inline: auto;
+  }
+  .section {
+    padding-block: 7rem 2rem;
+  }
+  .section-title {
+    margin-bottom: 2rem;
+  }
+  .nav {
+    height: calc(3.5rem + 2rem);
+  }
+  .nav-toggle,
+  .nav-close,
+  .nav-close {
+    display: none;
+  }
+  .nav-link {
+    font-size: 0.938rem;
+  }
+  .nav-menu {
+    display: flex;
+    column-gap: 3rem;
+    align-items: center;
+  }
+  .nav-list {
+    flex-direction: row;
+    column-gap: 4rem;
+  }
+  .home-container {
+    grid-template-columns: 420px 585px;
+    align-items: center;
+    column-gap: 6rem;
+    padding-top: 5rem;
+  }
+  .home-data {
+    text-align: initial;
+  }
+  .home-title {
+    margin-bottom: 4rem;
+  }
+  .home-buttons {
+    justify-content: initial;
+    column-gap: 1.5rem;
+  }
+  .home-meat {
+    width: 80px;
+    top: 13rem;
+  }
+  .home-circle {
+    width: 550px;
+    height: 550px;
+  }
+  .home-subcircle {
+    width: 430px;
+    height: 430px;
+  }
+  .home-images .home-img {
+    width: 400px;
+  }
+  .home-images img {
+    width: 95px;
+  }
+  .fav-container {
+    grid-template-columns: 520px;
+    row-gap: 4rem;
+  }
+  .fav_cheese-1,
+  .fav_cheese-2 {
+    width: 80px;
+  }
+  .fav_cheese-1 {
+    right: -18rem;
+  }
+  .fav_cheese-2 {
+    left: -18rem;
+  }
+  .fav-swiper {
+    max-width: 1000px;
+  }
+  .fav-article,
+  .fav-img {
+    width: 320px;
+  }
+  .fav_leaf-1,
+  .fav_leaf-2 {
+    width: 110px;
+  }
+  .care-container {
+    grid-template-columns: 500px 410px;
+    column-gap: 6rem;
+    align-items: center;
+    padding-block: 4rem;
+  }
+  .care-img {
+    width: 550px;
+    order: -1;
+  }
+  .care-item {
+    column-gap: 1rem;
+  }
+  .care-item i {
+    font-size: 2rem;
+  }
+  .banner {
+    padding-top: 4rem;
+  }
+  .banner-list {
+    column-gap: 6.5rem;
+  }
+  .banner-item {
+    column-gap: 1rem;
+  }
+  .banner-item i {
+    font-size: 4.5rem;
+  }
+  .banner-item span {
+    font-size: 2.5rem;
+  }
+  .product-container {
+    padding-top: 7.5rem;
+  }
+  .product-content {
+    grid-template-columns: repeat(3, 250px);
+    gap: 10rem 4rem;
+  }
+  .product-card {
+    padding: 11rem 2rem 2rem;
+    border-radius: 1.5rem;
+  }
+  .product-img {
+    width: 170px;
+    top: -5rem;
+  }
+  .product-subtitle {
+    font-size: 1rem;
+  }
+  .product-price {
+    font-size: 1rem;
+  }
+  .product-button {
+    right: 2rem;
+    bottom: 2rem;
+    padding: 6px;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+  }
+  .product-crab,
+  .product-hamburger,
+  .product-cheese {
+    width: 80px;
+  }
+  .product-crab {
+    top: 2rem;
+  }
+  .product-hamburger {
+    top: 30rem;
+    right: 3rem;
+  }
+  .product-cheese {
+    left: 4rem;
+    margin: initial;
+  }
+  .contact{
+    display: block;
+  }
+  .contact-container{
+    border-radius: 4rem;
+  }
+  .contact-content{
+    grid-template: 380px / 360px 320px;
+    justify-content: center;
+    align-items: flex-start;
+    column-gap: 10rem;
+    padding-top: 2rem;
+  }
+  .contact-data{
+    text-align: initial;
+    grid-template: max-content / repeat(2, max-conent);
+    gap: 3rem 2rem;
+  }
+  .contact-title{
+    margin-bottom: .75rem;
+  }
+  .contact-social{
+    justify-content: initial;
+  }
+  .contact-img{
+    width: 350px;
+    transform: translateY(-3rem);
+  }
+  .contact-shrimp,
+.contact-crab,
+.contact-meat {
+  width: 80px;
+}
+.contact-shrimp {
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 20rem;
+}
+.contact-crab {
+  top: 5rem;
+  left: 4rem;
+}
+.contact-meat {
+  right: initial;
+  left: 18rem;
+  bottom: -1rem;
+}
+.footer{
+  padding-block: 5rem 3rem;
+}
+.footer-container{
+  row-gap: 3rem;
+}
+.scrollup{
+  right: 3rem;
+}
+}
